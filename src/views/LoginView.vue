@@ -32,15 +32,13 @@
     </div>
 </template>
 
-<style>
-html{
-    height: 100%;
-    background-image: url("/imgs/bg_loginView.jpeg");
-}
+<style scoped>
+
 .loginView {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("/imgs/bg_loginView.jpeg");
 }
 .logoLogin{
     margin: 3rem 0;
