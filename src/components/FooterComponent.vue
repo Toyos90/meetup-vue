@@ -43,6 +43,7 @@
     justify-items: center;
     margin: 5px 35px;
 }
+
 p{
   color: black;
 }
