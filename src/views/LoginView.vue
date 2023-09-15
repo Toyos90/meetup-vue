@@ -33,7 +33,6 @@
 </template>
 
 <style scoped>
-
 .loginView {
     display: flex;
     flex-direction: column;
@@ -58,7 +57,6 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
-
     border-radius: 16px;
     border: 2px solid rgba(255, 255, 255, 0.50);
     background: rgba(255, 255, 255, 0.15);
@@ -71,24 +69,19 @@
     align-items: flex-start;
     gap: 10px;
     align-self: stretch;
-
     border-radius: 0px 8px 8px 0px;
-    border-left: 4px solid #8B5A2B;
+    border-left: 4px solid var(--contraste);
     background: rgba(255, 255, 255, 0.75);
 }
 .form span{
     align-self: flex-end;
     margin-top: 0.7rem;
-
-    color: #E4DCD5;
+    color: var(--light);
     font-size: 12px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
 }
 .btnForm{
     margin: 2rem 0;
-
     width: 327px;
     height: 48px;
 }
@@ -96,21 +89,16 @@
     width: 327px;
     height: 48px;
     flex-shrink: 0;
-
     border-radius: 32px;
-    background: #8B5A2B;    
+    background: var(--contraste);    
 }
 .loginText{
     position: relative;
     left: 50px;
     top: 13px;
-
-    color: #FFF;
-    font-family: 'Poppins', sans-serif;
+    color: var(--white);
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
     letter-spacing: 0.8px;
 }
 .loginText:hover {
@@ -126,11 +114,9 @@
     top: -38px;
     left: 10px;
     z-index: 3;
-
     width: 32px;
     height: 32px;
     flex-shrink: 0;
-    
 }
 .arrowSvg:hover{
     left: 25px;
@@ -147,24 +133,16 @@
 .spanLogin{
     margin: 1rem 0;
     padding: 2rem 0;
-    border-top: 1px solid whitesmoke;
+    border-top: 1px solid var(--white);
     width: 100%;
-
-    color: #E4DCD5;
+    color: var(--light);
     text-align: center;
-    font-family: "Poppins";
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 .spanLogin strong{
-    color: #E4DCD5;
-    font-family: Poppins;
+    color: var(--light);
     font-size: 12px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
 }
-
 </style>
