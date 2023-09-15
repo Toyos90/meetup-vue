@@ -1,12 +1,4 @@
-<template>
-    <div>
-      <v-btn @click="filterData('todos')">Todos</v-btn>
-      <v-btn @click="filterData('perros')">Perros</v-btn>
-      <v-btn @click="filterData('gatos')">Gatos</v-btn>
-    </div>
-  </template>
-  
-  <script>
+<script>
   export default {
     methods: {
       filterData(status) {
@@ -16,3 +8,13 @@
     }
   };
   </script>
+
+<template>
+    <div>
+      <v-btn @click="filterData('todos')">Todos</v-btn>
+      <v-btn @click="filterData('perros')">Perros</v-btn>
+      <v-btn @click="filterData('gatos')">Gatos</v-btn>
+    </div>
+  </template>
+  
+  
