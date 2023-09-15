@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-
 </script>
 
 <template>
@@ -41,15 +40,18 @@ import { RouterLink } from 'vue-router';
     align-items: center;
     background-image: url("/imgs/bg_loginView.jpeg");
 }
+
 .logoLogin{
     margin: 3rem 0;
 }
+
 .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .formInput{
     display: flex;
     width: 327px;
@@ -65,6 +67,7 @@ import { RouterLink } from 'vue-router';
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(2px);
 }
+
 .formInput input{
     display: flex;
     padding: 12px 19px;
@@ -103,6 +106,7 @@ import { RouterLink } from 'vue-router';
     font-weight: 500;
     letter-spacing: 0.8px;
 }
+
 .loginText:hover {
     letter-spacing: 1.8px;
 }
@@ -111,6 +115,7 @@ import { RouterLink } from 'vue-router';
     height: 48px;
     flex-shrink: 0;
 }
+
 .arrowSvg{
     position: relative;
     top: -38px;
@@ -120,18 +125,20 @@ import { RouterLink } from 'vue-router';
     height: 32px;
     flex-shrink: 0;
 }
+
 .arrowSvg:hover{
     left: 25px;
 }
+
 .substractSvg{
     position: relative;
-    top: -86px;
-
+    top: -87px;
     fill: rgba(244, 244, 244, 0.85);
     width: 154px;
     height: 48px;
     flex-shrink: 0;
 }
+
 .spanLogin{
     margin: 1rem 0;
     padding: 2rem 0;
@@ -142,6 +149,7 @@ import { RouterLink } from 'vue-router';
     font-size: 12px;
     font-weight: 400;
 }
+
 .spanLogin strong{
     color: var(--light);
     font-size: 12px;

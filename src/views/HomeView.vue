@@ -1,16 +1,16 @@
 <script>
-// import NavbarComponent from '../components/NavbarComponent.vue'
-import FooterComponent from '../components/FooterComponent.vue'
-import FilterButtons from '../components/filterButtons.vue';
-import PetCard from '../components/PetCard.vue'
+import NavbarComponent from '@/components/NavbarComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+import FilterButtons from '@/components/FilterButtons.vue';
+import PetCard from '@/components/PetCard.vue'
 
 
 export default {
   components: {
     PetCard,
     FilterButtons,
-    //NavbarComponent,
-    FooterComponent,
+    NavbarComponent,
+    FooterComponent
   },
   data() {
     return {
@@ -44,50 +44,51 @@ export default {
 
 
 <template>
-  <main>
-    <!-- <NavbarComponent /> -->
-    <h3>Nuevas huellitas en adopción</h3>
+  <NavbarComponent />
+  <main class="home">
+    <h3 class="home__title">Nuevas huellitas en adopción</h3>
     <div class="newPets">
       <img src="imgs/cat0.png" alt="Gatete asustado">
       <img src="imgs/dog0.png" alt="Shiba">
     </div>
 
-    <h3>Adopta una huellita</h3>
+    <h3 class="home__title">Adopta una huellita</h3>
     <FilterButtons @filter="applyFilter" />
-    <div>
       <!-- Mostrar las mascotas filtradas -->
-      <div v-for="pet in filteredPets" :key="pet.id">
+      <section class="petCards__container">
+      <article v-for="pet in filteredPets" :key="pet.id">
         <PetCard :imageUrl="pet.imageUrl" :title="pet.name" :subtitle="pet.category" />
-      </div>
-    </div>
-    <FooterComponent />
+      </article>
+    </section>
   </main>
+    <FooterComponent />
 </template>
 
 <style>
-@import '../assets/main.css';
-
-main{
-  background-color: #E7E0DA;
-}
-
-h3{
-  font-family: 'Poppins';
-  margin: 2rem;
-  letter-spacing: 1px;
-  font-weight: none;
-}
-.newPets{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap:1.3rem;
-  margin: 2rem 4rem;
+  .home{
+    padding: 1.5rem;
   }
 
-.newPets img {
-  max-width: 60%; /* Ajusta el ancho de las imágenes para centrarlas horizontalmente */
-  max-height: 60%; /* Ajusta la altura de las imágenes para centrarlas verticalmente */
-}
+  .home__title{
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .newPets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 2rem;
+    padding: 0 0.3rem;
+    }
 
+  .newPets img {
+    max-width: 60%; /* Ajusta el ancho de las imágenes para centrarlas horizontalmente */
+    max-height: 60%; /* Ajusta la altura de las imágenes para centrarlas verticalmente */
+  }
+  .petCards__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
 </style>

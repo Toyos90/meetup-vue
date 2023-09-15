@@ -1,34 +1,51 @@
 <script>
   export default {
+    data() {
+      return {
+        selectedButton: 'todos',
+      };
+    },
     methods: {
       filterData(status) {
         // Lógica para aplicar el filtro según el estado seleccionado
         this.$emit('filter', status);
+        this.selectedButton = status;
       }
     }
   };
-  </script>
+</script>
 
 <template>
-    <div class="btn_container">
-      <v-btn @click="filterData('todos')">Todos</v-btn>
-      <v-btn @click="filterData('perros')">Perros</v-btn>
-      <v-btn @click="filterData('gatos')">Gatos</v-btn>
-    </div>
-  </template>
-  
-  
+  <div class="btn_container">
+    <button @click="filterData('todos')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'todos' }">Todos</button>
+    <button @click="filterData('gatos')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'gatos' }">Gatos</button>
+    <button @click="filterData('perros')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'perros' }">Perros</button>
+  </div>
+</template>
 
-  <style scoped>
-   .btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px; 
+<style>
+  .btn_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px; 
+  padding: 1rem 0;
   }
-  
+
+  .btn_filter{
+    padding: 0.6rem;
+  }
+
+  .btn_filter:hover{
+    width: 100px;
+    background-color: var(--contraste);
+    border-radius: 25px;
+    color: var(--white);
+  }
+
   .selected {
-    background-color: #8B5A2B;
-    color: white;
-    border-radius: 10px; 
+    background-color: var(--contraste);
+    color: var(--white);
+    border-radius: 25px;
   }
-  </style>
+</style>
