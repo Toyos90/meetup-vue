@@ -14,7 +14,7 @@ describe('FooterComponent', () => {
     expect(wrapper.findAll('.icon')[0].text()).toContain('Inicio')
     // Comprobar que el segundo icono tiene el texto Chat
     expect(wrapper.findAll('.icon')[1].text()).toContain('Chat')
-    // Comprobar que el tercer icono tiene el texto Donor
-    expect(wrapper.findAll('.icon')[2].text()).toContain('Donor')
+    // Comprobar que el tercer icono tiene el texto favoritos
+    expect(wrapper.findAll('.icon')[2].text()).toContain('Favoritos')
   })
 })
