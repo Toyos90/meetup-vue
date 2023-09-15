@@ -1,5 +1,5 @@
 <script>
-import NavbarComponent from '../components/NavbarComponent.vue'
+// import NavbarComponent from '../components/NavbarComponent.vue'
 import FooterComponent from '../components/FooterComponent.vue'
 import FilterButtons from '../components/filterButtons.vue';
 import PetCard from '../components/PetCard.vue'
@@ -9,29 +9,31 @@ export default {
   components: {
     PetCard,
     FilterButtons,
-    NavbarComponent,
+    //NavbarComponent,
     FooterComponent,
   },
   data() {
     return {
       pets: [
-        { id: 1, imageUrl: 'public/imgs/dog3.png', name: 'Mascota 1', category: 'Perros' },
-        { id: 2, imageUrl: 'public/imgs/cat3.png', name: 'Mascota 2', category: 'Gatos' },
-        { id: 3, imageUrl: 'public/imgs/dog4.png', name: 'Mascota 3', category: 'Perros' },
-        
+        { id: 1, imageUrl: '/imgs/dog3.png', name: 'Simba', category: 'perros' },
+        { id: 2, imageUrl: '/imgs/cat3.png', name: 'Pinche', category: 'gatos' },
+        { id: 3, imageUrl: '/imgs/dog4.png', name: 'Coca', category: 'perros' },
+        { id: 2, imageUrl: '/imgs/cat4.png', name: 'Luna', category: 'gatos' },
       ],
       filterCategory: 'todos',
     };
   },
   computed: {
-    filteredPets() {
-      if (this.filterCategory === 'todos') {
-        return this.pets;
-      } else {
-        return this.pets.filter(pet => pet.category === this.filterCategory);
-      }
-    },
+  filteredPets() {
+    if (this.filterCategory === 'perros') {
+      return this.pets.filter(pet => pet.category === 'perros');
+    } else if (this.filterCategory === 'gatos') {
+      return this.pets.filter(pet => pet.category === 'gatos');
+    } else {
+      return this.pets; // Si se selecciona "Todos" o cualquier otra categoría, muestra todas las mascotas
+    }
   },
+},
   methods: {
     applyFilter(category) {
       this.filterCategory = category;
@@ -43,8 +45,14 @@ export default {
 
 <template>
   <main>
-    <NavbarComponent />
+    <!-- <NavbarComponent /> -->
     <h3>Nuevas huellitas en adopción</h3>
+    <div class="newPets">
+      <img src="imgs/cat0.png" alt="Gatete asustado">
+      <img src="imgs/dog0.png" alt="Shiba">
+    </div>
+
+    <h3>Adopta una huellita</h3>
     <FilterButtons @filter="applyFilter" />
     <div>
       <!-- Mostrar las mascotas filtradas -->
@@ -55,3 +63,31 @@ export default {
     <FooterComponent />
   </main>
 </template>
+
+<style>
+@import '../assets/main.css';
+
+main{
+  background-color: #E7E0DA;
+}
+
+h3{
+  font-family: 'Poppins';
+  margin: 2rem;
+  letter-spacing: 1px;
+  font-weight: none;
+}
+.newPets{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1.3rem;
+  margin: 2rem 4rem;
+  }
+
+.newPets img {
+  max-width: 60%; /* Ajusta el ancho de las imágenes para centrarlas horizontalmente */
+  max-height: 60%; /* Ajusta la altura de las imágenes para centrarlas verticalmente */
+}
+
+</style>

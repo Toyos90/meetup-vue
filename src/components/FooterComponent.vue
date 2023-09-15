@@ -14,7 +14,7 @@
         </div><br/>
         <div class="icon">
             <img width="40" height="40" src="../assets/images/corazon.png">
-            <p>Donor</p>
+            <p>Favoritos</p>
         </div>
     </div>
   </footer>
@@ -42,10 +42,10 @@
     flex-direction: column;
     justify-items: center;
     margin: 5px 35px;
+    
 }
 
-p{
-  color: black;
-}
+
+
 
 </style>
