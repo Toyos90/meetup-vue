@@ -15,8 +15,8 @@ export default {
   data() {
     return {
       pets: [
-        { id: 1, imageUrl: '/imgs/dog3.png', name: 'Simba', category: 'perros' },
-        { id: 2, imageUrl: '/imgs/cat3.png', name: 'Pinche', category: 'gatos' },
+        { id: 1, imageUrl: '/imgs/dog3.png', name: 'Simba', category: 'perros', description:'' },
+        { id: 2, imageUrl: '/imgs/_cat1.png', name: 'Cleo', category: 'gatos' },
         { id: 3, imageUrl: '/imgs/dog4.png', name: 'Coca', category: 'perros' },
         { id: 2, imageUrl: '/imgs/cat4.png', name: 'Luna', category: 'gatos' },
       ],
