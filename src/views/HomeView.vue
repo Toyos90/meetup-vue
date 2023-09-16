@@ -89,6 +89,8 @@ export default {
   .petCards__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
+    gap: 0.5rem;}
+  
+ main{ 
+    background-color: var(--light);}
 </style>
