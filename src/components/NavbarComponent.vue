@@ -1,57 +1,36 @@
-<script>
-import { ref } from 'vue'
+<script setup>
+// Este código importa el componente `RouterLink` del router de Vue.
 
-export default {
-  setup() {
-    const drawer = ref(false)
-
-    return { drawer }
-  },
-}
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <v-app>
-  <div>
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer">
-        <img src="../assets/images/List.png" alt="List icon">
-      </v-app-bar-nav-icon>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon>
-        <RouterLink to="/LoginView">
-          <img src="../assets/images/NavbarComponent.png" alt="Login icon">
-        </RouterLink>
-      </v-app-bar-nav-icon>
-    </v-app-bar>
-
-    <v-navigation-drawer v-model="drawer" app temporary>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="title">Menú</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
-
-      <v-list dense nav>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <RouterLink to="/">
-              <v-list-item-title>Inicio</v-list-item-title>
-            </RouterLink>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </div>
-</v-app>
+  <!-- Este template define un encabezado con un logotipo y un enlace a la vista de inicio de sesión. -->
+  <header>
+    <nav class="navbar">
+      <img src="../assets/images/List.png" alt="List">
+      <RouterLink to="/loginView" class="login__route">
+      <!-- Este enlace navega a la vista de inicio de sesión. -->
+        <img src="../assets/images/NavbarComponent.png" class="login__icon" alt="Icon Login">
+      </RouterLink>
+    </nav>
+  </header>
 </template>
 
-<style scoped>
-
+<style>
+.navbar{
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+}
+.login__route {
+  display: flex;
+  align-items: center;
+}
+.login__icon{
+  width: 40px;
+  height: 40px;
+}
 </style>

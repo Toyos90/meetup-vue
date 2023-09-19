@@ -5,8 +5,6 @@ import LoginView from '../../views/LoginView.vue'
 import Vuex from 'vuex' // Importamos Vuex
 import store from '../../store' // Importamos el store
 
-// No creamos una instancia local de Vue
-
 // Creamos un grupo de tests para nuestra vista
 describe('LoginView.vue', () => {
   // Creamos un test para verificar que el logo se renderiza correctamente

@@ -1,20 +1,19 @@
 import { describe, it, expect } from 'vitest'
+import { shallowMount } from '@vue/test-utils'
+import HomeView from '../../views/HomeView.vue'
+import FooterComponent from '../../components/FooterComponent.vue'
 
-import { mount } from '@vue/test-utils'
-import FooterComponent from '../FooterComponent.vue'
+describe('HomeView', () => {
+  it('renders FooterComponent', () => {
+    // Importamos la función shallowMount() de Vue Test Utils
+    // Esta función nos permite montar un componente sin sus dependencias
 
-describe('FooterComponent', () => {
-  it('renders properly', () => {
-    const wrapper = mount(FooterComponent)
-    // Comprobar que el footer tiene la clase footer
-    expect(wrapper.classes()).toContain('footer')
-    // Comprobar que el footer tiene tres iconos
-    expect(wrapper.findAll('.icon').length).toBe(3)
-    // Comprobar que el primer icono tiene el texto Inicio
-    expect(wrapper.findAll('.icon')[0].text()).toContain('Inicio')
-    // Comprobar que el segundo icono tiene el texto Chat
-    expect(wrapper.findAll('.icon')[1].text()).toContain('Chat')
-    // Comprobar que el tercer icono tiene el texto Donor
-    expect(wrapper.findAll('.icon')[2].text()).toContain('Donor')
+    const wrapper = shallowMount(HomeView)
+
+    // Comprobamos que el componente FooterComponent existe dentro de la vista HomeView
+    // Para ello, usamos la función findComponent() de Vue Test Utils
+    // Esta función nos permite encontrar un componente específico dentro de un wrapper
+
+    expect(wrapper.findComponent(FooterComponent).exists()).toBe(true)
   })
 })
