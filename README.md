@@ -110,6 +110,19 @@ Start the server
 ```
 ## 🍍 Basic Code Structure
 
+Basic Main.js
+```bash
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+
+const app = createApp(App)
+
+app.use(router)
+
+app.mount('#app')
+```
+
 Basic View/Component
 ```diff
 <script setup>
@@ -144,7 +157,6 @@ const router = createRouter({
 
 export default router;
 ```
-
 
 
 ## Authors ©️
