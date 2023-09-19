@@ -1,41 +1,144 @@
-# meetup-Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+![Logo](https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png)
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# MeetUp Vue 2023
 
-## Customize configuration
+Introducción básica a Vue 3.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Run Locally  💻
 
-```sh
+Clone the project
+
+```bash
+  git clone https://github.com/Toyos90/meetup-vue
+```
+
+Go to the project directory
+
+```bash
+  cd meetup-vue
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Running Tests 🕵🏽
+
+To run tests, run the following command
+
+```bash
+  npm run test:unit
+```
+
+
+## Installation 💽
+
+Install project-name with npm
+
+```bash
+  npm init vue@latest
+```
+
+Optional features
+```http
+Project name: <project-name> 
+
+|          FEATURE  | INSTALL |
+| ----------------- | ------- |
+|               TS: |    NO   |
+|              JSX: |    NO   |
+|   ADD VUE ROUTER: |   YES   |
+|            PINIA: |    NO   |
+|           VITEST: |   YES   |
+|       END-TO-END: |    NO   |
+|           ESLINT: |    NO   |
+|         PRETTIER: |    NO   |
+```
+
+Go to project directory
+```bash
+cd <project-name>
+```
+Install dependencies
+```bash
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
+Start the server
+```bash
 npm run dev
 ```
+## Tech Stack
 
-### Compile and Minify for Production
+Vue3, Vuetify, Vitest.
 
-```sh
-npm run build
+## 🔗 Links
+[![vue](https://img.shields.io/badge/Vue3-'?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vuejs.org/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://router.vuejs.org/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+
+
+## Authors ©️
+
+- [@luluzan](https://github.com/luluzan)
+- [@Toyos90](https://github.com/Toyos90)
+- [@albegosu](https://github.com/albegosu)
+- [@cesarconte](https://github.com/cesarconte)
+- [@NAFISA-USMANOVA](https://github.com/NAFISA-USMANOVA)
+
+
+## Roadmap
+
+- Additional browser support
+
+- Add more integrations
+
+
+## Usage/Examples
+
+```javascript
+import Component from 'my-project'
+
+function App() {
+  return <Component />
+}
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-```sh
-npm run test
+## API Reference
+
+#### Get all items
+
+```http
+  GET /api/items
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
-```sh
-npm run lint
+#### Get item
+
+```http
+  GET /api/items/${id}
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#### add(num1, num2)
+
+Takes two numbers and returns the sum.
+
