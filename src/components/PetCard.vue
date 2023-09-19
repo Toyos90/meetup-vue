@@ -36,7 +36,7 @@
           <h3>{{ subtitle }}</h3></div>
           <!-- El formulario de contacto con el dueño de la mascota. -->
           <div class="text">
-              <p>Es una gata juguetona y cariñosa, le encanta que le rasquen la barriga.</p>
+              <p>Es una mascota juguetona y cariñosa, le encanta que le rasquen la barriga.</p>
               <button type="submit" class="btnForm">
                   <div class="btnForm_Group12">
                       <p class="loginText">Contactar</p>

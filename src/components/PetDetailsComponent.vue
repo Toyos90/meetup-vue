@@ -8,7 +8,7 @@
         <h1>Cleo</h1>
         <h3>Común Europeo</h3>
         <div class="text">
-            <p>Es una gata juguetona y cariñosa, le encanta que le rasquen la barriga.</p>
+            <p>Es una mascota juguetona y cariñosa, le encanta que le rasquen la barriga.</p>
             <button type="submit" class="btnForm">
                 <div class="btnForm_Group12">
                     <p class="loginText">Contactar</p>
