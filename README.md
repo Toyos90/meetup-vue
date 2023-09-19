@@ -1,5 +1,7 @@
 
-![Logo](https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png)
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" alt="Logo Vue")
+</p>
 
 
 # MeetUp Vue 2023
@@ -7,7 +9,15 @@
 Introducción básica a Vue 3.
 
 
-## Run Locally  💻
+## 🔗 Links
+[![vue](https://img.shields.io/badge/Vue3-4FC08D'?style=for-the-badge&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
+[![router](https://img.shields.io/badge/RouterVue-000000?style=for-the-badge&logo=vuedotjs&logoColor=white)](https://router.vuejs.org/)
+[![pinia](https://img.shields.io/badge/Pinia-FFDB00?style=for-the-badge&logo=vuedotjs&logoColor=white)](https://pinia.vuejs.org/)
+[![vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
+[![vuetify](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=white)](https://vuetifyjs.com/)
+## 💻  Run Repository Locally
+
+[![git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/) [![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
 Clone the project
 
@@ -34,59 +44,107 @@ Start the server
 ```
 
 
-## Running Tests 🕵🏽
+## 🕵🏽 Running Tests
 
-To run tests, run the following command
+[![vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
+
+To run tests, run the following command 
 
 ```bash
   npm run test:unit
 ```
 
 
-## Installation 💽
+## 🪜 Dependencies
+
+```bash
+meetup-vue@0.0.0 
+├── @mdi/font@7.2.96
+├── @vitejs/plugin-vue@4.3.4
+├── @vue/test-utils@2.4.1
+├── eslint-plugin-vue@9.17.0
+├── eslint@8.49.0
+├── jsdom@22.1.0
+├── vite@4.4.9
+├── vitest-svelte-kit@0.0.7
+├── vitest@0.34.4
+├── vue-router-mock@1.0.0
+├── vue-router@4.2.4
+├── vue@3.3.4
+├── vuetify@3.4.0-alpha.1
+└── vuex@4.1.0
+```
+
+## 💽 Installation a New Vue3 Project - Steps
 
 Install project-name with npm
 
 ```bash
-  npm init vue@latest
+    npm init vue@latest
 ```
 
 Optional features
-```http
-Project name: <project-name> 
-
-|          FEATURE  | INSTALL |
-| ----------------- | ------- |
-|               TS: |    NO   |
-|              JSX: |    NO   |
-|   ADD VUE ROUTER: |   YES   |
-|            PINIA: |    NO   |
-|           VITEST: |   YES   |
-|       END-TO-END: |    NO   |
-|           ESLINT: |    NO   |
-|         PRETTIER: |    NO   |
+```bash
+    ✔ Project name: … <your-project-name>
+    ✔ Add TypeScript? No
+    ✔ Add JSX Support? No
+    ✔ Add Vue Router for Single Page Application development? Yes
+    ✔ Add Pinia for state management? No
+    ✔ Add Vitest for Unit testing? Yes
+    ✔ Add an End-to-End Testing Solution? No
+    ✔ Add ESLint for code quality? No
+    ✔ Add Prettier for code formatting? No
 ```
 
 Go to project directory
 ```bash
-cd <project-name>
+    cd <project-name>
 ```
 Install dependencies
 ```bash
-npm install
+    npm install
 ```
 Start the server
 ```bash
-npm run dev
+    npm run dev
 ```
-## Tech Stack
+## 🍍 Basic Code Structure
 
-Vue3, Vuetify, Vitest.
+Basic View/Component
+```diff
+<script setup>
+    //YOUR LOGIC FOR VIEW OR COMPONENT
+</script>
 
-## 🔗 Links
-[![vue](https://img.shields.io/badge/Vue3-'?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vuejs.org/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://router.vuejs.org/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+<template>
+    //YOUR HTML TEMPLATE
+</template>
+
+<style scoped>
+    //YOUR STYLES FOR THIS VIEW OR COMPONENT
+<style>
+```
+
+Basic Router
+```diff
+import { createRouter, createWebHistory } from 'vue-router'
+
+import HomeView from '../views/HomeView.vue'
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    }
+  ]
+})
+
+export default router;
+```
+
 
 
 ## Authors ©️
@@ -96,24 +154,6 @@ Vue3, Vuetify, Vitest.
 - [@albegosu](https://github.com/albegosu)
 - [@cesarconte](https://github.com/cesarconte)
 - [@NAFISA-USMANOVA](https://github.com/NAFISA-USMANOVA)
-
-
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
-
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
 
 
 ## API Reference
