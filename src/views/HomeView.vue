@@ -21,7 +21,7 @@ const filteredPets = computed(() => {
   } else if (filterCategory.value === 'gatos') {
     return pets.value.filter(pet => pet.category === 'gatos');
   } else {
-    return pets.value; 
+    return pets.value;
   }
 });
 
@@ -41,7 +41,7 @@ const applyFilter = (category) => {
     <h3 class="home__title">Adopta una huellita</h3>
     <FilterButtons @filter="applyFilter" />
     <section class="petCards__container">
-            <article v-for="pet in filteredPets" :key="pet.id">
+      <article v-for="pet in filteredPets" :key="pet.id">
         <PetCard :imageUrl="pet.imageUrl" :title="pet.name" :subtitle="pet.category" />
       </article>
     </section>
@@ -52,32 +52,35 @@ const applyFilter = (category) => {
 
 
 <style scoped>
-  .home{
-    padding: 1.5rem;
-  }
+.home {
+  padding: 1.5rem;
+}
 
-  .home__title{
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  .newPets{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 2rem;
-    padding: 0 0.3rem;
-    }
+.home__title {
+  font-size: 1rem;
+  font-weight: 300;
+}
 
-  .newPets img {
-    max-width: 60%;
-    max-height: 60%; 
-  }
-  .petCards__container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;}
-  
- main{ 
-    background-color: var(--light);}
-</style>
+.newPets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 2rem;
+  padding: 0 0.3rem;
+}
+
+.newPets img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.petCards__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+main {
+  background-color: var(--light);
+}</style>

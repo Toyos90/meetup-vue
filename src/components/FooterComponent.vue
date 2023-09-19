@@ -22,32 +22,32 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style scoped>
-  .footer {
-    background-color: #F4F4F4;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
+.footer {
+  background-color: #F4F4F4;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
-  #icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+#icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
-  .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px 35px;
-    text-decoration: none;
-    color: var(--black);
-    font-size: 14px;
-  }
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 35px;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 14px;
+}
 
-  .icon img {
-    width: 30px;
-    height: 30px;
-  }
+.icon img {
+  width: 30px;
+  height: 30px;
+}
 </style>

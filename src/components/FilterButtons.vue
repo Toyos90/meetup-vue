@@ -1,16 +1,16 @@
 <script>
 export default {
-data() {
-  return {
-    selectedButton: 'todos',
-  };
-},
-methods: {
-  filterData(status) {
-    this.$emit('filter', status);
-    this.selectedButton = status;
+  data() {
+    return {
+      selectedButton: 'todos',
+    };
   },
-},
+  methods: {
+    filterData(status) {
+      this.$emit('filter', status);
+      this.selectedButton = status;
+    },
+  },
 };
 </script>
 
@@ -29,28 +29,28 @@ methods: {
 </template>
 
 <style scoped>
-  .btn_container {
+.btn_container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 30px; 
+  gap: 30px;
   padding: 1rem 0;
-  }
+}
 
-  .btn_filter{
-    padding: 0.6rem;
-  }
+.btn_filter {
+  padding: 0.6rem;
+}
 
-  .btn_filter:hover{
-    width: 100px;
-    background-color: var(--contraste);
-    border-radius: 25px;
-    color: var(--white);
-  }
+.btn_filter:hover {
+  width: 100px;
+  background-color: var(--contraste);
+  border-radius: 25px;
+  color: var(--white);
+}
 
-  .selected {
-    background-color: var(--contraste);
-    color: var(--white);
-    border-radius: 25px;
-  }
+.selected {
+  background-color: var(--contraste);
+  color: var(--white);
+  border-radius: 25px;
+}
 </style>
