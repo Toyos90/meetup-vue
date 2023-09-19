@@ -38,7 +38,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+  justify-content: flex-end; 
   align-items: center;
 }
     

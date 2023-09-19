@@ -6,7 +6,7 @@ import HomeView from '../../views/HomeView.vue'
 // Definimos una suite de pruebas para el componente HomeView
 describe('HomeView', () => {
     // **Prueba 1:** Verifica que el componente tiene un elemento `main` con la clase `home`
-  it('has a main element with the class "home"', () => {
+  it('has a main element with the class home', () => {
     // Creamos una instancia superficial del componente HomeView
     const wrapper = shallowMount(HomeView)
     // Buscamos el elemento `main` dentro del componente renderizado

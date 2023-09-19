@@ -21,7 +21,7 @@ import { RouterLink } from 'vue-router';
   </footer>
 </template>
 
-<style>
+<style scoped>
   .footer {
     background-color: #F4F4F4;
     position: fixed;

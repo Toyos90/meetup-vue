@@ -43,7 +43,7 @@ methods: {
   </div>
 </template>
 
-<style>
+<style scoped>
   .btn_container {
   display: flex;
   justify-content: space-around;

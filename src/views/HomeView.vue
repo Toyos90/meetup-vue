@@ -1,5 +1,3 @@
-
-
 <script setup>
 import { ref, computed } from 'vue';
 import NavbarComponent from '@/components/NavbarComponent.vue';
@@ -61,9 +59,6 @@ const applyFilter = (category) => {
 };
 </script>
 
-
-
-
 <template>
   <!-- Componente de navegación -->
   <NavbarComponent />
@@ -99,7 +94,7 @@ const applyFilter = (category) => {
 </template>
 
 
-<style>
+<style scoped>
   .home{
     padding: 1.5rem;
   }

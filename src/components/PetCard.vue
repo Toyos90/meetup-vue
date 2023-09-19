@@ -57,7 +57,7 @@
   
   </template>
 
-  <style>
+  <style scoped>
     #petCard {
       background-color: var(--light);
       box-shadow: none;

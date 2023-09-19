@@ -17,7 +17,7 @@ import { RouterLink } from 'vue-router';
   </header>
 </template>
 
-<style>
+<style scoped>
 .navbar{
   background-color: var(--white);
   display: flex;
