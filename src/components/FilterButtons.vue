@@ -1,25 +1,45 @@
 <script>
-  export default {
-    data() {
-      return {
-        selectedButton: 'todos',
-      };
-    },
-    methods: {
-      filterData(status) {
-        // Lógica para aplicar el filtro según el estado seleccionado
-        this.$emit('filter', status);
-        this.selectedButton = status;
-      }
-    }
+// Este código crea un componente Vue que permite al usuario filtrar una lista de datos según el estado de un botón.
+
+export default {
+
+// Definición de los datos de la clase
+data() {
+  // Variable que almacena el estado del botón seleccionado
+  return {
+    selectedButton: 'todos',
   };
+},
+
+// Definición de los métodos de la clase
+methods: {
+
+  // Método para aplicar el filtro
+  filterData(status) {
+    // Lógica para aplicar el filtro según el estado seleccionado
+    this.$emit('filter', status);
+    // Actualiza el estado del botón seleccionado
+    this.selectedButton = status;
+  },
+},
+};
 </script>
 
+<!-- Este template define una lista de botones que permiten al usuario filtrar una lista de datos. -->
 <template>
   <div class="btn_container">
-    <button @click="filterData('todos')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'todos' }">Todos</button>
-    <button @click="filterData('gatos')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'gatos' }">Gatos</button>
-    <button @click="filterData('perros')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'perros' }">Perros</button>
+    <button @click="filterData('todos')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'todos' }">
+      <!-- Este botón representa el estado "Todos". -->
+      Todos
+    </button>
+    <button @click="filterData('gatos')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'gatos' }">
+      <!-- Este botón representa el estado "Gatos". -->
+      Gatos
+    </button>
+    <button @click="filterData('perros')" :class="{ 'btn_filter': true, 'selected': selectedButton === 'perros' }">
+      <!-- Este botón representa el estado "Perros". -->
+      Perros
+    </button>
   </div>
 </template>
 

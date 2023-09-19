@@ -1,18 +1,20 @@
   <script>
+  // Este archivo define un componente que muestra una tarjeta de mascota con una imagen, un título y un subtítulo.
+// La tarjeta también tiene un botón que muestra una ventana emergente con más información sobre la mascota.
   export default {
     props: {
-      imageUrl: String,
-      title: String,
-      subtitle: String,
+    imageUrl: String, // La URL de la imagen de la mascota.
+    title: String, // El título de la tarjeta de la mascota.
+    subtitle: String, // El subtítulo de la tarjeta de la mascota.
     },
     data() {
       return {
-        showOverlay: false,
+        showOverlay: false, // Indica si la ventana emergente está visible.
       };
     },
     methods: {
       toggleOverlay() {
-        this.showOverlay = !this.showOverlay;
+        this.showOverlay = !this.showOverlay; // Invierte el estado de la ventana emergente.
       },
     },
   };
@@ -21,16 +23,18 @@
 
   <template>
     <div class="imgMini">
+    <!-- La tarjeta de la mascota. -->
       <v-card @click="toggleOverlay" id="petCard">
+    <!-- La imagen de la mascota. -->
         <v-img :src="imageUrl" alt="Mascota" height="200"></v-img>
       </v-card>
       <div v-if="showOverlay" class="overlay">
-        
         <button @click="toggleOverlay" class="close-button">X</button>
         <img :src="imageUrl" alt="Mascota" style="width: 100%;" class="overlay-image">
         <div class="overlay-content">
           <h2>{{ title }}</h2>
           <h3>{{ subtitle }}</h3></div>
+          <!-- El formulario de contacto con el dueño de la mascota. -->
           <div class="text">
               <p>Es una gata juguetona y cariñosa, le encanta que le rasquen la barriga.</p>
               <button type="submit" class="btnForm">
