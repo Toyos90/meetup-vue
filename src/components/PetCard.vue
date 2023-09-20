@@ -64,16 +64,16 @@ export default {
   box-shadow: none;
 }
 
-#petCard__title {
-  padding: 16px;
-}
+#petCard__title{
+  padding: 16px;}
 
 
-.imgMini img {
-  border-radius: 16px;
-  object-fit: cover;
-  width: 154px;
-  height: 154px;
+.imgMini img{
+border-radius: 16px;
+object-fit: cover;
+width: 154px;
+height: 154px;
+border-radius: 16px;
 }
 
 .overlay {
@@ -93,134 +93,126 @@ export default {
   max-width: 100%;
   height: auto;
   position: relative;
-  margin-top: -5px;
+  margin-top: -5px; 
   z-index: 1;
 
 }
-
 .overlay-content {
-  background-color: var(--light);
-  border-radius: 25px 25px 0 0;
-  padding: 20px;
-  position: relative;
-  z-index: 2;
-  margin-top: -100px;
-
+background-color: var(--light);
+border-radius: 25px 25px 0 0;
+padding: 20px;
+position: relative; 
+z-index: 2; 
+margin-top: -100px;
+ 
 }
 
-.overlay h2 {
+  .overlay h2 {
   margin-left: 0.6rem;
   font-weight: 600;
   letter-spacing: 3px;
-}
+  }
 
 .overlay h3 {
-  color: var(--contraste);
-  margin-bottom: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-left: 0.6rem;
-  margin-bottom: 0;
+color: var(--contraste);
+margin-bottom: 1rem;
+font-weight: 600;
+letter-spacing: 1px;
+margin-left: 0.6rem;
+margin-bottom: 0;
 }
 
-.overlay p {
-  font-size: 15px;
+.overlay p{font-size: 15px;
 
 }
 
 .close-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: var(--light);
-  border: none;
-  border-radius: 50%;
-  color: black;
-  font-size: 1.2rem;
-  padding: 7px 12px;
-  cursor: pointer;
-  z-index: 3;
-  /* Botón sobre el contenido e imagen */
+position: absolute;
+top: 10px;
+left: 10px; 
+background-color: var(--light);
+border: none;
+border-radius: 50%; 
+color: black;
+font-size: 1.2rem;
+padding: 7px 12px;
+cursor: pointer;
+z-index: 3; 
 }
 
-.btnForm {
-  margin: 2rem 0;
-  width: 327px;
-  height: 48px;
+.btnForm{
+margin: 2rem 0;
+width: 327px;
+height: 48px;
 }
 
-p {
-  margin: 0 auto;
-  padding-left: 1rem;
-  letter-spacing: 1px;
+p{
+margin: 0 auto;
+padding-left: 1rem;
+letter-spacing: 1px;
 }
 
-.text {
-  background-color: var(--white);
-  padding: 1.2rem;
-  font-weight: 300;
-  align-content: center;
-  width: 100%;
+.text{
+background-color: var(--white);
+padding: 1.2rem;
+font-weight: 300;
+align-content: center;
+width: 100%;
 }
 
 .btnForm_Group12 {
-  width: 327px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 32px;
-  background: var(--contraste);
+width: 327px;
+height: 48px;
+flex-shrink: 0;
+border-radius: 32px;
+background: var(--contraste);    
 }
 
-.loginText {
-  position: relative;
-  left: 50px;
-  top: 13px;
+.loginText{
+position: relative;
+left: 50px;
+top: 13px;
 
-  color: var(--white);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+color: var(--white);
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.8px;
+text-transform: uppercase;
 }
-
 .loginText:hover {
-  letter-spacing: 1.8px;
+letter-spacing: 1.8px;
 }
 
-.btnForm_Group11 {
-  width: 100px;
-  height: 48px;
-  flex-shrink: 0;
+.btnForm_Group11{
+width: 100px;
+height: 48px;
+flex-shrink: 0;
 }
 
-.phoneSvg {
-  position: relative;
-  top: -38px;
-  left: 10px;
-  z-index: 3;
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
+.phoneSvg{
+position: relative;
+top: -38px;
+left: 10px;
+z-index: 3;
+width: 32px;
+height: 32px;
+flex-shrink: 0;
 
 }
 
-.phoneSvg:hover {
-  left: 25px;
+.phoneSvg:hover{
+left: 25px;
 }
 
-.substractSvg {
-  position: relative;
-  top: -87px;
-  fill: rgba(244, 244, 244, 0.85);
-  width: 154px;
-  height: 48px;
-  flex-shrink: 0;
+.substractSvg{
+position: relative;
+top: -87px;
+fill: rgba(244, 244, 244, 0.85);
+width: 154px;
+height: 48px;
+flex-shrink: 0;
 }
 
-.rounded {
-  width: 154px;
-  height: 154px;
-  border-radius: 16px;
-}</style>
+</style>
